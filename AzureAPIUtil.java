@@ -16,6 +16,7 @@ public class AzureAPIUtil {
 	public static String buildAzureAuthorizationToken(String id, String secret) {
 		String base64Sign;
 
+		// Set Token expire time
 		LocalDateTime date = LocalDateTime.now().plusDays(1);
 		String expiry = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:'00.0000000Z'"));
 		try {
